@@ -1,256 +1,263 @@
 'use strict';
 
 /*
-  Попросить пользователя ввести произвольную строку
-  и записать ее в переменную string
+  Напишите функцию checkNumberType(num)
   
-  PS: для перебора массива используте цикл for или for...of
+  Функция получает число num как аргумент и возвращает 
+  строку "Even" если число четное и строку "Odd" если не четное.
 */
 
-// let string = prompt ('введите произвольный набор символов');
-// let arr = string.split("");
-
-// // Разбить строку в массив, пусть разделителем будет пробел, и записать в переменную arr
-// let arrSec = arr.join(" ")
-// console.log(arrSec);
-
-// // // Вывести в консоли общую длину массива arr
-// console.log(arrSec.length);
-
-// // // Используя цикл, вывести в консоль все индексы массива arr
-
-// for(let i = 0; i < arrSec.length; i += 1) {
-//     console.log(i);
-//   }
-
-// // // Используя цикл, вывести в консоль все элементы массива arr
-
-// for(const value of arr) {
-//     console.log(value);
-//   }
-// // console.log();
-
-// // // Используя цикл, bывести в консоли все пары индекс:значение массива arr
-// for (let i = 0; i < arrSec.length; i += 1) {
-//     if (i % 2 !== 0) continue;
-  
-//     console.log(i); // 1, 3, 5, 7, 9
-//   }
-
-// // console.log();
-
-
-/*
-  Напишите цикл, который предлагает, через prompt, ввести число больше 100. 
-  
-  Если посетитель ввёл другое число – попросить ввести ещё раз, и так далее.
-
-  Цикл должен спрашивать число пока либо посетитель не введёт число, большее 100, 
-  либо не нажмёт кнопку Cancel.
-  
-  Предполагается, что посетитель вводит только числа, обрабатывать невалидный ввод 
-  вроде строк 'qweqwe' в этой задаче необязательно.
-  
-  PS: используйте цикл do...while
-*/
-
-// let userInput;
-
-//   do {
-//     userInput = Number ( prompt('введите число больше 100') );
-//   } while(userInput <= 100 && userInput !== 0);
-
-// console.log (userInput);
-
-/*
-  Напишите скрипт, который выводит через console.log все 
-  числа от min до max, с двумя исключениями: 
-    
-    - Для чисел, нацело делящихся на 3, вместо числа выводится строка 'Fizz'
-    
-    - Для чисел, нацело делящихся на 5, но не на 3, вместо числа выводится строка 'Buzz'
-    
-  PS: используйте цикл for
-*/
-
-// const min = 1;
-// const max = 100;
-
-// for (let i = min; i <= max; i++) {
-//   if (i % 3 === 0) {
-//     console.log('Fizz');
-//   } else if (i % 5 === 0) {
-//     console.log('Buzz');
-//   } else console.log(i);
+// const checkNumberType = function(num) {
+// // return num % 2;
+//   if (num % 2 === 0) {
+//   return  'Even'
+//   } else {return 'Odd'};
 // }
 
+// // Вызовы функции для проверки
+// console.log( checkNumberType(2) ); // 'Even'
+
+// console.log( checkNumberType(46) ); // 'Even'
+
+// console.log( checkNumberType(3) ); // 'Odd'
+
+// console.log( checkNumberType(17) ); // 'Odd'
+
+
 /*
-  Напишите скрипт, который выбирает из массива numbers 
-  все числа, которые больше чем значение переменной num, 
-  записывая эти числа в массив newArray.
-      
-  В результате в массиве newArray будут все подходяшие числа.
-      
-  PS: используйте цикл for или for...of и оператор ветвления if
+  Напишите функцию formatString(str)
+  
+  - Функия принимает на вход строку str
+  - Если длина строки не превышает 40 символов, функция возвращает ее. 
+  - Если длина больше 40 символов, то функция обрезает строку до 40-ти
+    символов и добавляет в конец строки троеточие '...', после чего 
+    возвращает укороченную версию.
 */
 
-// const numbers = [1, 3, 17, 5, 9, 14, 8, 14, 34, 18, 26];
-// const num = 10;
-// const newArray = [];
+// const formatString = function(str) {
+//   if (str.length <= 40) {
+//     return str
+//   } else {return str.split(' ',40) }
+// };
 
-// for (let a of numbers) {
-//   if (a > num) {
-//     newArray.push(a);
-//   }
+// const formatString = function(str) {
+//   if (str.length <= 40) {
+//     return str
+//   } else {return ((str.split('',40)).join('')+'...')}
+// };
+
+// // Вызовы функции для проверки
+// console.log(
+//   formatString("Curabitur ligula sapien, tincidunt non.")
+// ); // вернется оригинальная строка
+
+// console.log(
+//   formatString("Vestibulum facilisis, purus nec pulvinar iaculis.")
+// ); // вернется форматированная строка
+
+// console.log(
+//   formatString("Curabitur ligula sapien.")
+// ); // вернется оригинальная строка
+
+// console.log(
+//   formatString("Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.")
+// ); // вернется форматированная строка
+
+/*
+  Напишите функцию checkForSpam(str)
+  
+  Функция принимает 1 параметр str - строку,
+  и проверять ее на содержание слов: spam и sale
+  
+  Если нашли зарещенное слово то функция возвращает true,
+  если запрещенных слов нет функция возвращает false
+  
+  PS: слова могут быть в произвольном регистре
+*/
+
+// const checkForSpam = function(str) {
+//   const newStr = str.toLowerCase();
+//   const spamCheck = newStr.includes('spam') || newStr.includes('sale');
+//   return spamCheck;
 // }
 
-// console.log(newArray);
+// // Вызовы функции для проверки
+// console.log( checkForSpam('Latest technology news') ); // false
 
-/*
-  Напишите скрипт, который проверяет произвольную строку 
-  в переменной string и находит в ней самое длинное слово,
-  записывая его в переменную longestWord.
+// console.log( checkForSpam('JavaScript weekly newsletter') ); // false
+
+// console.log( checkForSpam('Get best sale offers now!') ); // true
+
+// console.log( checkForSpam('[SPAM] How to earn fast money?') ); // true
+
+/*  
+  Написать функцию, getPx(str) 
+
+  Функция getPx должна получать строку вида '10px',
+  проверять была ли передана строка, если да, 
+  возвращать только числовую составляющую, к примеру 10.
+    
+  Если была передана не строка, функция возвращает null.
 */
 
-// const string = "May the force be with you";
-// let longestWord;
-// let wordLenght = 0;
+// const getPx = function(str) {
+//   if (typeof str == 'string') {
+//     return parseFloat(str);
+//   } else {return null}; 
+// };
 
-// let stringArr = string.split(' ');
+// // Вызовы функции для проверки
+// console.log( getPx("10px") === 10 ); // должно быть:  true
+// console.log( getPx("10.5") === 10.5 ); // должно быть:  true
+// console.log( getPx("0") === 0 ); // должно быть:  true
+// console.log( getPx(-1) ); // должно быть:  null
+// console.log( getPx(10) ); // должно быть:  null
 
-// for (let i = 0; i < stringArr.length; i++) {
-//   if (stringArr[i].length > wordLenght) {
-//     wordLenght = stringArr[i].length;
-//     longestWord = stringArr[i];
-//   }
+//------------------------------------- 5   ---------------------------------
+/*  
+  Создайте фукнцию findLongestWord(str),
+  которая получает аргументом произвольную строку и
+  возвращает самое длинное слово в этой строке.   
+  
+  Важное условие - в строке могут быть только пробелы
+  и символы букв и цифр!
+*/
+
+// const findLongestWord = function(str) {
+//   const strArr = str.split(' ');
+//   let wordLenght = 0;
+//   let longestWord;
+
+//   for (let i = 0; i < strArr.length; i++) {
+//     if (strArr[i].length > wordLenght) {
+//       wordLenght = strArr[i].length;
+//       longestWord = strArr[i];
+//     };
+//   }; 
+//   return longestWord;
+// };
+
+// // // Вызовы функции для проверки
+// console.log(
+//   findLongestWord("The quick brown fox jumped over the lazy dog")
+// ); // вернет 'jumped'
+
+// console.log(
+//   findLongestWord("Google do a roll")
+// ); // вернет 'Google'
+
+// console.log(
+//   findLongestWord("May the force be with you")
+// ); // вернет 'force'
+
+//-----------------------------------  6  -----------------------------------
+
+/*  
+  Создайте функцию findLargestNumber(numbers), 
+  которая получает массив чисел numbers, и возвращает 
+  самое большое число в массиве.
+*/
+
+// const findLargestNumber = function(numbers) {
+//   let maxNumber = 0;
+//   for (let i = 0; i < numbers.length; i += 1) {
+//     if (maxNumber < numbers[i]) {
+//       maxNumber = numbers[i];
+//     };
+//   };
+//   return maxNumber;
+// };
+
+// // Вызовы функции для проверки
+// console.log(
+//   findLargestNumber([1, 2, 3])
+// ); // вернет 3
+
+// console.log(
+//   findLargestNumber([27, 12, 18, 5])
+// ); // вернет 27
+
+// console.log(
+//   findLargestNumber([31, 128, 14, 74])
+// ); // вернет 128
+
+//-------------------------------------   7   ---------------------------------
+
+/*  
+  Есть массив уникальных чисел uniqueNumbers.
+  
+  Написать функцию, addUniqueNumbers(...), 
+  которая получает произвольное кол-во чисел как аргументы, 
+  и добавляет в массив uniqueNumbers только уникальные,
+  а те которые в массиве уже есть игнорирует.
+*/
+
+// const uniqueNumbers  = [2, 1, 4, 9];
+
+// const addUniqueNumbers = function(...arr) {
+//   let arrNum = Array.from(arr);
+//   for (let i = 0; i < uniqueNumbers.length; i += 1) {
+//     if (uniqueNumbers.includes(arrNum[i]) === true) {
+//     }
+//     else {uniqueNumbers.push(arr[i])
+//     };
+//   };
+//   return uniqueNumbers.splice(uniqueNumbers.indexOf(undefined),1);
 // }
 
-// console.log(longestWord); // 'force'
+// // Вызовы функции для проверки
+// addUniqueNumbers(1, 2, 3, 4);
+// console.log(
+//   uniqueNumbers
+// ); // [2, 1, 4, 9, 3]
 
+// addUniqueNumbers(12, 2, 3, 19);
+// console.log(
+//   uniqueNumbers
+// ); // [2, 1, 4, 9, 3, 12, 19]
+
+// addUniqueNumbers(4, 5, 12, 3, 1, 2, 8);
+// console.log(
+//   uniqueNumbers
+// ); // [2, 1, 4, 9, 3, 12, 19, 5, 8]
+
+//---------------------------------   8   -------------------------------------
 /*
-  Напишите скрипт который:
+  Создайте функцию removeFromArray(arr), 
+  которая получает 1 параметр, исходный массив arr.
   
-  - Запрашивает по очереди числа при помощи prompt и сохраняет их в массиве.
-    Используйте do...while.
+  При вызове функции, первым аргументом всегда будет массив чисел,
+  за которым следуют один или несколько аргументов, тоже чисел. 
   
-  - Заканчивает запрашивать числа, как только посетитель введёт не число 
-    или нажмёт Cancel. При этом ноль 0 не должен заканчивать ввод, 
-    это разрешённое число.
-  
-  - После того как ввод был завершен, если массив не пустой, 
-    скрипт выводит сумму всех значений массива: "Сумма: <сумма всех значений в массиве>"
-    Используйте цикл for...of
+  Удалите все элементы из исходного массива, 
+  которые имеют такое же значение, что и аргументы.
 */
 
-// let userArr = [];
-// let userInput = 0;
-// let totalSum = 0;
+// const removeFromArray = function(arr, ...args) {
+//   const arrNum = arr.slice();
+//   console.log('arrNum =',arrNum);
+//   const otherNum = Array.from(args);
+//   console.log('otherNum =',otherNum);
+//   let newArr = [];
+//   for (let i = 0; i < arrNum.length; i++) {
+//     if (otherNum.includes(arrNum[i])) {
+//     } else {
+//       newArr.push(arrNum[i])
+//     }
+//   };
+//   return newArr;
+// };
 
-// do {
-//   userArr.push(Number(userInput = prompt ('введите число массива')));
-// } while (Number(userInput)>=0 && userInput !== null);
+// // Вызовы функции для проверки
+// console.log(
+//   removeFromArray([1, 2, 3, 4, 5], 2, 4)
+// ); // [1, 3, 5]
 
-// for (const i of userArr) {
-//   if (i > 0) {
-//     totalSum += i;
-//   } else {userArr.pop()}
-//   }
-// console.log(totalSum);
+// console.log(
+//   removeFromArray([12, 4, 3, 8, 17], 3, 29, 18, 4)
+// ); // [12, 8, 17]
 
-// alert (`Сумма всех значений в массиве: ${totalSum}`);
-
-// console.log(userArr);
+//-----------------------------------------------------------------------------
 
 
-// const scientist = [
-//   { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
-//   { first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
-//   { first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
-//   { first: 'Marie', last: 'Curie', year: 1867, passed: 1934 },
-//   { first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 },
-//   { first: 'Nicolaus', last: 'Copernicus', year: 1473, passed: 1543 },
-//   { first: 'Max', last: 'Planck', year: 1858, passed: 1947 },
-//   { first: 'Katherine', last: 'Blodgett', year: 1898, passed: 1979 },
-//   { first: 'Ada', last: 'Lovelace', year: 1815, passed: 1852 },
-//   { first: 'Sarah E.', last: 'Goode', year: 1855, passed: 1905 },
-//   { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
-//   { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
-// ];
-// 1) отримати масив вчених що народилися в 19 ст
-// 2) знайти суму років скільки прожили всі вченні
-// 3) Відсортувати вчених по алфавіту
-// 4) Відсортувати вчених по даті народження
-// 5) Відсортувати вчених по кількості прожитих років
-// 6) Видалити з масива вчених що родилися в 15 або 16 або 17 столітті
-// 7) Знайти вченого який народився найпізніше.
-// 8) Знайти рік народження Albert Einstein
-// 9) Знайти вчених прізвище яких починається на літеру С
-// 10) Видалити з масива всіх вчених імя яких починається на A
-
-// const newList = scientist.filter(century => century.year > 1800 && century.year < 1900);
-
-// console.log(newList);
-
-// const lifeYears = scientist.reduce(function(acc, el){
-//   return acc + (el.passed - el.year);
-// },0)
-
-// console.log(lifeYears);
-
-// const filterScientist = scientist.sort(function(a,b){
-//   return a.first > b.first ? 1 : -1;
-// });
-
-// console.log(filterScientist);
-
-// const sortByYears = scientist.sort(function(a ,b){
-//   return a.year > b.year ? 1 : -1;
-// }) 
-
-// console.log(sortByYears);
-
-// const sortScientistByLifeYears = scientist
-// .map(el => el.passed - el.year);
-// .sort(function(a, b){
-//   return (a.passed - a.year) > (b.passed - b.year) ? 1 : -1
-// })
-
-// console.log(sortScientistByLifeYears);
-
-// const sixTask = scientist
-
-// // .filter(el => el.year > 1800)
-// .filter(function(el){
-//   return el.year <= 1400 && el.year >= 1700;
-// });
-
-// console.log(sixTask);
-
-// const olderScientist = scientist
-// .sort(function(a,b){
-//   return (b.year - a.year);
-// })
-
-// console.log(olderScientist[0]);
-
-// const birthDay = scientist.find(function(el){
-//   return el.first === 'Albert' && el.last === 'Einstein';
-// })
-
-// console.log(birthDay);
-
-// const firstLetterScientist = scientist
-
-// .filter(function(el){
-//   return el.last.charAt(0) === 'C';
-// });
-
-// console.log(firstLetterScientist);
-
-// const aScientist = scientist
-
-// .filter(function(el){
-//   return el.first.charAt(0) !== 'A';
-// });
-
-// console.log(aScientist);
+// для 3-й домашки
