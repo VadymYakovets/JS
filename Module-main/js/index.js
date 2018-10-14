@@ -1,263 +1,190 @@
-'use strict';
+'use strict'
 
-/*
-  Напишите функцию checkNumberType(num)
-  
-  Функция получает число num как аргумент и возвращает 
-  строку "Even" если число четное и строку "Odd" если не четное.
-*/
-
-// const checkNumberType = function(num) {
-// // return num % 2;
-//   if (num % 2 === 0) {
-//   return  'Even'
-//   } else {return 'Odd'};
-// }
-
-// // Вызовы функции для проверки
-// console.log( checkNumberType(2) ); // 'Even'
-
-// console.log( checkNumberType(46) ); // 'Even'
-
-// console.log( checkNumberType(3) ); // 'Odd'
-
-// console.log( checkNumberType(17) ); // 'Odd'
-
-
-/*
-  Напишите функцию formatString(str)
-  
-  - Функия принимает на вход строку str
-  - Если длина строки не превышает 40 символов, функция возвращает ее. 
-  - Если длина больше 40 символов, то функция обрезает строку до 40-ти
-    символов и добавляет в конец строки троеточие '...', после чего 
-    возвращает укороченную версию.
-*/
-
-// const formatString = function(str) {
-//   if (str.length <= 40) {
-//     return str
-//   } else {return str.split(' ',40) }
-// };
-
-// const formatString = function(str) {
-//   if (str.length <= 40) {
-//     return str
-//   } else {return ((str.split('',40)).join('')+'...')}
-// };
-
-// // Вызовы функции для проверки
-// console.log(
-//   formatString("Curabitur ligula sapien, tincidunt non.")
-// ); // вернется оригинальная строка
-
-// console.log(
-//   formatString("Vestibulum facilisis, purus nec pulvinar iaculis.")
-// ); // вернется форматированная строка
-
-// console.log(
-//   formatString("Curabitur ligula sapien.")
-// ); // вернется оригинальная строка
-
-// console.log(
-//   formatString("Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.")
-// ); // вернется форматированная строка
-
-/*
-  Напишите функцию checkForSpam(str)
-  
-  Функция принимает 1 параметр str - строку,
-  и проверять ее на содержание слов: spam и sale
-  
-  Если нашли зарещенное слово то функция возвращает true,
-  если запрещенных слов нет функция возвращает false
-  
-  PS: слова могут быть в произвольном регистре
-*/
-
-// const checkForSpam = function(str) {
-//   const newStr = str.toLowerCase();
-//   const spamCheck = newStr.includes('spam') || newStr.includes('sale');
-//   return spamCheck;
-// }
-
-// // Вызовы функции для проверки
-// console.log( checkForSpam('Latest technology news') ); // false
-
-// console.log( checkForSpam('JavaScript weekly newsletter') ); // false
-
-// console.log( checkForSpam('Get best sale offers now!') ); // true
-
-// console.log( checkForSpam('[SPAM] How to earn fast money?') ); // true
-
-/*  
-  Написать функцию, getPx(str) 
-
-  Функция getPx должна получать строку вида '10px',
-  проверять была ли передана строка, если да, 
-  возвращать только числовую составляющую, к примеру 10.
-    
-  Если была передана не строка, функция возвращает null.
-*/
-
-// const getPx = function(str) {
-//   if (typeof str == 'string') {
-//     return parseFloat(str);
-//   } else {return null}; 
-// };
-
-// // Вызовы функции для проверки
-// console.log( getPx("10px") === 10 ); // должно быть:  true
-// console.log( getPx("10.5") === 10.5 ); // должно быть:  true
-// console.log( getPx("0") === 0 ); // должно быть:  true
-// console.log( getPx(-1) ); // должно быть:  null
-// console.log( getPx(10) ); // должно быть:  null
-
-//------------------------------------- 5   ---------------------------------
-/*  
-  Создайте фукнцию findLongestWord(str),
-  которая получает аргументом произвольную строку и
-  возвращает самое длинное слово в этой строке.   
-  
-  Важное условие - в строке могут быть только пробелы
-  и символы букв и цифр!
-*/
-
-// const findLongestWord = function(str) {
-//   const strArr = str.split(' ');
-//   let wordLenght = 0;
-//   let longestWord;
-
-//   for (let i = 0; i < strArr.length; i++) {
-//     if (strArr[i].length > wordLenght) {
-//       wordLenght = strArr[i].length;
-//       longestWord = strArr[i];
-//     };
-//   }; 
-//   return longestWord;
-// };
-
-// // // Вызовы функции для проверки
-// console.log(
-//   findLongestWord("The quick brown fox jumped over the lazy dog")
-// ); // вернет 'jumped'
-
-// console.log(
-//   findLongestWord("Google do a roll")
-// ); // вернет 'Google'
-
-// console.log(
-//   findLongestWord("May the force be with you")
-// ); // вернет 'force'
-
-//-----------------------------------  6  -----------------------------------
-
-/*  
-  Создайте функцию findLargestNumber(numbers), 
-  которая получает массив чисел numbers, и возвращает 
-  самое большое число в массиве.
-*/
-
-// const findLargestNumber = function(numbers) {
-//   let maxNumber = 0;
-//   for (let i = 0; i < numbers.length; i += 1) {
-//     if (maxNumber < numbers[i]) {
-//       maxNumber = numbers[i];
-//     };
-//   };
-//   return maxNumber;
-// };
-
-// // Вызовы функции для проверки
-// console.log(
-//   findLargestNumber([1, 2, 3])
-// ); // вернет 3
-
-// console.log(
-//   findLargestNumber([27, 12, 18, 5])
-// ); // вернет 27
-
-// console.log(
-//   findLargestNumber([31, 128, 14, 74])
-// ); // вернет 128
-
-//-------------------------------------   7   ---------------------------------
-
-/*  
-  Есть массив уникальных чисел uniqueNumbers.
-  
-  Написать функцию, addUniqueNumbers(...), 
-  которая получает произвольное кол-во чисел как аргументы, 
-  и добавляет в массив uniqueNumbers только уникальные,
-  а те которые в массиве уже есть игнорирует.
-*/
-
-// const uniqueNumbers  = [2, 1, 4, 9];
-
-// const addUniqueNumbers = function(...arr) {
-//   let arrNum = Array.from(arr);
-//   for (let i = 0; i < uniqueNumbers.length; i += 1) {
-//     if (uniqueNumbers.includes(arrNum[i]) === true) {
-//     }
-//     else {uniqueNumbers.push(arr[i])
-//     };
-//   };
-//   return uniqueNumbers.splice(uniqueNumbers.indexOf(undefined),1);
-// }
-
-// // Вызовы функции для проверки
-// addUniqueNumbers(1, 2, 3, 4);
-// console.log(
-//   uniqueNumbers
-// ); // [2, 1, 4, 9, 3]
-
-// addUniqueNumbers(12, 2, 3, 19);
-// console.log(
-//   uniqueNumbers
-// ); // [2, 1, 4, 9, 3, 12, 19]
-
-// addUniqueNumbers(4, 5, 12, 3, 1, 2, 8);
-// console.log(
-//   uniqueNumbers
-// ); // [2, 1, 4, 9, 3, 12, 19, 5, 8]
-
-//---------------------------------   8   -------------------------------------
-/*
-  Создайте функцию removeFromArray(arr), 
-  которая получает 1 параметр, исходный массив arr.
-  
-  При вызове функции, первым аргументом всегда будет массив чисел,
-  за которым следуют один или несколько аргументов, тоже чисел. 
-  
-  Удалите все элементы из исходного массива, 
-  которые имеют такое же значение, что и аргументы.
-*/
-
-// const removeFromArray = function(arr, ...args) {
-//   const arrNum = arr.slice();
-//   console.log('arrNum =',arrNum);
-//   const otherNum = Array.from(args);
-//   console.log('otherNum =',otherNum);
-//   let newArr = [];
-//   for (let i = 0; i < arrNum.length; i++) {
-//     if (otherNum.includes(arrNum[i])) {
-//     } else {
-//       newArr.push(arrNum[i])
-//     }
-//   };
-//   return newArr;
-// };
-
-// // Вызовы функции для проверки
-// console.log(
-//   removeFromArray([1, 2, 3, 4, 5], 2, 4)
-// ); // [1, 3, 5]
-
-// console.log(
-//   removeFromArray([12, 4, 3, 8, 17], 3, 29, 18, 4)
-// ); // [12, 8, 17]
-
-//-----------------------------------------------------------------------------
+let sectionArr = [{
+  classes: 'fa-mars',
+  sectionYear: 1879,
+  title: 'Albert Einstein born',
+  text: 'Albert Einstein is born in Ulm, Germany, the son of Hermann Einstein, a German Jewish featherbed salesman, and his wife Pauline.',
+},
+{
+  classes:'fa-magnet',
+  sectionYear: 1884,
+  title: 'Mystery of Magnetism',
+  text: "At the age of five, Albert Einstein becomes fascinated by his father's pocket compass, intrigued by invisible forces that cause the needle always to point north. Later in life, Einstein will look back at this moment as the genesis of his interest in science.",
+},
+{
+  classes: 'fa-plane',
+  sectionYear: 1894,
+  title: 'Move to Italy',
+  text: 'Struggling financially, the Einstein family moves from Germany to Italy in search of better work. Albert, aged fifteen, stays behind in Munich to finish his schooling, but soon either quits or is kicked out of his high school and follows his parents to Italy.',
+},
+{
+  classes: 'fa-ban',
+  sectionYear: 1895,
+  title: 'Boarding School in Aarau',
+  text: 'Albert Einstein attempts to get out of his last year of high school by taking an entrance exam to ETH, the Swiss Polytechnic University in Zurich. He fails the test, forcing him to attend one final year of high school in the small town of Aarau, Switzerland, instead.',
+},
+{
+  classes: 'fa-university',
+  sectionYear: 1896,
+  title: 'Einstein at ETH',
+  text: 'Albert Einstein graduates from high school and begins attending ETH, the prestigious Swiss Polytechnic University in Zurich.',
+},
+{
+  classes:'fa-graduation-cap',
+  sectionYear: 1900,
+  title: 'College Graduation',
+  text: 'Albert Einstein graduates from ETH with a degree in physics. He tries to find a teaching job, but is unable to obtain work.',
+},
+{
+  classes:'fa-briefcase',
+  sectionYear: 1902,
+  title: 'Swiss Patent Office',
+  text: 'Unable to find any work as a teacher or academic, Albert Einstein takes a job as a clerk at the Swiss Patent Office.',
+},
+{
+  classes:'fa-files-o',
+  sectionYear: 1905,
+  title: 'Annus Mirabilis',
+  text: 'Over the course of a year that he will later describe as his "Annus Mirabilis" - his miraculous year - Albert Einstein publishes four major theoretical papers in the prestigious German academic journal Annalen Der Physik. The four papers include a groundbreaking new interpretation of the photoelectric effect as well as the first published exploration of the theory of Special Relativity and the first formulation of the famous equation E = mc2',
+},
+{
+  classes:'fa-file-o',
+  sectionYear: 1915,
+  title: 'General Theory of Relativity',
+  text: 'Einstein completes his General Theory of Relativity.',
+},
+{
+  classes:'fa-thumbs-up',
+  sectionYear: 1919,
+  title: 'Eclipse Proves Theory of Relativity',
+  text: "A solar eclipse provides dramatic observable evidence that Einstein's General Theory of Relativity is correct. Einstein suddenly becomes a worldwide celebrity.",
+},
+{
+  classes:'fa-trophy',
+  sectionYear: 1921,
+  title: 'Nobel Prize',
+  text: 'Albert Einstein wins the Nobel Prize in Physics for his work on the photoelectric effect, first published in 1905.',
+},
+{
+  classes:'fa-envelope',
+  sectionYear: 1939,
+  title: 'Letter to President Roosevelt',
+  text: "Fearing that Nazi scientists might win the race to develop the world's first atomic bombs, Albert Einstein writes a letter to President Franklin D. Roosevelt, urging him to launch an American program of nuclear research.",
+},
+{
+  classes:'fa-death',
+  sectionYear: 1955,
+  title: 'Death of Albert Einstein',
+  text: 'Albert Einstein dies of heart failure at the age of 76.',
+}
+]
 
 
-// для 3-й домашки
+
+// select element
+let root = document.querySelector('#root');
+
+// create elemenet
+let header = document.createElement('header');
+let h1 = document.createElement('h1');
+let main = document.createElement('main');
+let firstRow = document.createElement('div');
+let imgdiv = document.createElement('div');
+let figure = document.createElement('figure');
+let img = document.createElement('img');
+let figcaption = document.createElement('figcaption');
+let tributeInfo = document.createElement('div');
+let p = document.createElement('p');
+let quote = document.createElement('div');
+let blockquote = document.createElement('blockquote');
+let timeline = document.createElement('div');
+let h2 = document.createElement('h2');
+// let section = document.createElement('section')
+// let faDiv = document.createElement('div');
+// let h3 = document.createElement('h3');
+// let h3Div = document.createElement('div');
+// let pSection = document.createElement('p');
+
+// add class
+// faDiv.setAttribute('class','fa');
+// faDiv.setAttribute('class','fa-mars');
+// h3Div.setAttribute('class','year');
+
+//add atribute
+h1.setAttribute('id','title');
+main.setAttribute('id','main');
+firstRow.setAttribute('id','first-row')
+imgdiv.setAttribute('id','img-div');
+img.setAttribute('id','image');
+img.setAttribute('src','http://jonivainio-kaila.fi/freecodecamp/tribute/assets/img/einstein-mobile.jpg');
+img.setAttribute('alt','Profile picture of Albert Einstein.');
+figcaption.setAttribute('id','img-caption');
+tributeInfo.setAttribute('id','tribute-info');
+quote.setAttribute('id','quote');
+timeline.setAttribute('id','timeline');
+
+//paste textContent
+h1.textContent = 'Albert Einstein';
+figcaption.textContent = 'Profile picture of Albert Einstein';
+p.innerHTML = "<strong>Albert Einstein</strong> was a German-born theoretical physicist. He developed the theory of relativity, one of the two pillars of modern physics. Einstein's work is also known for its influence on the philosophy of science. Einstein is best known in popular culture for his mass-energy equivalence formula. He received the 1921 Nobel Prize in Physics for his services to theoretical physics, and especially for his discovery of the law of the photoelectric effect, a pivotal step in the evolution of quantum theory.";
+blockquote.textContent = 'Anyone who has never made a mistake has never tried anything new';
+h2.textContent = 'Timeline of Albert Einstein\'s life';
+// h3.textContent = 'Boarding School in Aarau';
+// h3Div.textContent = '1895';
+// pSection.textContent = 'Albert Einstein attempts to get out of his last year of high school by taking an entrance exam to ETH, the Swiss Polytechnic University in Zurich. He fails the test, forcing him to attend one final year of high school in the small town of Aarau, Switzerland, instead.'
+
+
+//paste elemnet on screen
+root.append(header);
+header.append(h1);
+root.append(main);
+main.append(firstRow);
+firstRow.append(imgdiv);
+imgdiv.append(figure);
+figure.append(img);
+figure.append(figcaption);
+firstRow.append(tributeInfo);
+tributeInfo.append(p);
+main.append(quote);
+quote.append(blockquote);
+main.append(timeline);
+timeline.append(h2);
+// timeline.append(section); 
+// section.appendChild(faDiv);
+// section.appendChild(h3);
+// h3.appendChild(h3Div);
+// section.appendChild(pSection);
+
+let str = '';
+
+for (let el of sectionArr) {
+//   let section = document.createElement('section');
+//   let icon = document.createElement('div');
+//   let h3 = document.createElement('h3');
+//   let year = document.createElement('div');
+//   let p = document.createElement('p');
+
+//   h3.textContent = el.title;
+//   year.textContent = el.sectionYear;
+//   p.textContent = el.text;
+
+//   icon.classList.add('fa',el.classes);
+//   year.classList.add('year');
+
+//   section.append(icon);
+//   h3.prepend(year);
+//   section.append(h3);
+//   section.append(p);
+
+//   root.append(section);
+
+let template = `<section>
+<div class="fa ${el.classes}"></div>
+<h3><div class="year">${el.sectionYear}</div>${el.title}</h3>
+<p>${el.text}</p>
+</section>`
+str += template;
+}
+
+timeline.innerHTML += str
