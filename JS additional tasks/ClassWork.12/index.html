@@ -1,0 +1,91 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="./css/style.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+      <title>Title</title>
+  </head>
+  <body>
+    <div class="content-placeholder"></div>
+
+    <!-- <template id="address-template">
+      <p>You can find me in {{city}}. My address is {{number}} {{street}}.</p>
+    </template> -->
+
+    <!-- ------------------------------------------- -->
+
+
+    <!-- <template id="example-template">
+      {{#each people}}
+      <p>{{firstName}} {{lastName}}</p>
+      {{/each}}
+      </template> -->
+
+          <!-- ------------------------------------------- -->
+
+    <!-- <div id="menucontainer"></div>
+
+    <template id="menu">
+      <div>
+        <h1>{{title}}</h1>
+        <ul>
+          {{#each items}}
+          <li>{{this}}</li>
+          {{/each}}
+        </ul>
+      </div>
+    </template>  -->
+
+    <!-- ------------------------------------------- -->
+
+    <!-- <template id="built-in-helpers-template">
+        {{#each animals}}
+        <p>
+            The {{name}} says
+            {{#if noise}}
+            "{{noise}}".
+            {{else}}
+            nothing since its a {{this.name}}.
+            {{/if}}
+        </p>
+        {{/each}}
+    </template>
+
+    <div class="content-placeholder"></div> -->
+
+    <!-- ------------------------------------------- -->
+
+
+<!-- 
+    <template id="gallery-template">
+      <div class="gallery">
+          <h2 class="gallery-title">{{title}}</h2>
+          <div class="gallery-content"></div>
+            {{#each items}}
+            <div class="gallery-item">
+              <img class="gallery-img" src="{{img}}" alt="{{text}}">
+              <p class="gallery-text">{{text}}</p>
+            </div>
+            {{/each}}
+      </div>
+    </template> -->
+
+    <template id="gallery">
+        <h2 class="gallery-title">{{title}}</h2>
+        <div class="gallery-content">
+            {{#each items}}
+            <div class="gallery-item">
+                <img class="gallery-img" src="{{img}}" alt={{text}}>
+                <p class="gallery-text">{{text}}</p>
+            </div>
+            {{/each}}
+        </div>
+</template>
+
+
+
+  <script src="./js/index.js"></script>
+</body>
+</html>
