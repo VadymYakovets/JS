@@ -152,4 +152,4 @@
     mango.reset();
   
   // Проверяем значения после reset
-  console.log('Проверяем значения после reset',mango.customerMoney); // 0
+  console.log('Проверяем значения после reset:',mango.customerMoney); // 0

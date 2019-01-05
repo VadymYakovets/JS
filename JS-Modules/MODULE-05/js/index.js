@@ -214,3 +214,5 @@ const getUsersByFriend = (arr, name) => arr
 console.log('------------------------------------ Task 8 ------------------------------------');
 console.log(getUsersByFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
 console.log(getUsersByFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
+
+console.log('------------------------------------ THE END ------------------------------------');
