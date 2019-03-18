@@ -1,0 +1,102 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="./css/style.css">
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script> -->
+      <title>Title</title>
+  </head>
+  <body>
+
+<!-- <div class="content-placeholder"></div> -->
+  
+  <!-- <template id="address-template">
+    <p>You can find me in {{city}}. My address is {{number}} {{street}}</p>
+  </template> -->
+
+
+<!-- <tempalate class="template">
+    <h1 class="main-text">{{title}}</h1>
+    <p class="textOne">{{helpers}}</p>
+    <p class="textTwo">{{func}}</p>
+</tempalate> -->
+
+<!-- <template id="example-template">
+  <ul>
+    {{#each people}}
+    <li>{{firstName}} {{lastName}}</li>
+    {{/each}}
+  </ul>
+  <ul>
+    {{#each temp}}
+    <li>{{this}}</li>
+    {{/each}}
+  </ul>
+</template> -->
+
+<!-- делаем шаблон через reduce -->
+
+<!-- <ul class="content-placeholder"></ul>
+
+<template id="reduce">
+  <li>{{firstName}} {{lastName}}</li>
+</template> -->
+
+<!-- <ul class="content-placeholder"></ul>
+
+<template id="menu">
+  <h1 class="main-text">{{title}}</h1>
+  <ul>
+      {{#each items}}
+      <li>{{this}}</li>
+      {{/each}}
+    </ul>
+  </template> -->
+
+
+<!-- РИСУЕМ ГАЛЕРЕЙКУ -->
+
+<!-- <div class="content-placeholder"></div>
+
+<template id="main-gallery">
+        {{#each items}}
+      <div class="gallery-item">
+        <img class="gallery-img" src="{{img}}" alt=>
+        <p class="gallery-text">{{text}}</p>
+      </div>
+        {{/each}}
+</template> -->
+
+<!-- рисуем галерею телефоны -->
+
+<div class="content-placeholder"></div>
+
+<template id="phones-galery">
+  {{#each this}}
+    <div class="module-card-bottom">
+        <img src="{{image}}" alt="{{description}}" class="module-card-img"/>
+        <div>
+        <p>{{description}}</p>
+        <p></p>
+        <p class="price"> ${{price}}</p>
+        <div class="hide">
+        <p><b>CPU</b> {{cpu}}</p>
+        <p><b>CAMERA</b> {{camera}}</p>
+        <p><b>SIZE</b> {{size}}</p>
+        <p><b>WEIGHT</b> {{weight}}</p>
+        <p><b>DISPLAY</b> {{display}}</p>
+        <p><b>BATTERY</b> {{battery}}</p>
+        <p><b>MEMORY</b> {{memory}}</p>
+        </div>
+        </div>
+    
+        <button class="module-card-button">See More</button>
+        </div>
+      {{/each}}
+</template>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+</html>

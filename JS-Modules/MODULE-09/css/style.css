@@ -1,0 +1,91 @@
+ /* resets and general styles */
+ *{
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  ::-moz-selection{
+    color: #FFFFFF;
+    background: #FF5722;
+  }
+  ::selection{
+    color: #FFFFFF;
+    background: #FF5722;
+  }
+
+  .wrapper{
+    /* width: calc(4*225px); */
+
+    width: 80%;
+    margin: 15px auto;
+    border: 1px solid red;
+    padding: 15px;
+  }
+
+  .time {
+    font: normal 90px 'Roboto', sans-serif;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+/* 
+  span, a, strong{font-weight: 700;}
+  a{transition: .2s; text-decoration: none; color: #787878; border-bottom: 1px solid #607D8B;}
+  a:hover{transition: .2s; color: #FF5722;}
+  /* page layout */
+  /* header */
+  .stopwatch{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 60%;
+    background: #607D8B;
+  }
+  /* section */
+  /* /* section{
+    width: 100%;
+    height: 50%;
+  } */
+  /* section h1, section p.meta{
+    color: #FFFFFF;
+    margin-bottom: 15px;
+  } */
+  /* section hgroup{margin-top: -360px;}
+  section p.time{font-size: 6em;}
+  section p.meta,section p.strings{font-size: 1.5em;}
+  section h1{font-size: 4.5em;} */
+  /* countdown styles */
+  /* div#countdown{color: #353535;}
+  div#countdown p{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+  } */
+  /* p.time{
+    width: 100%;
+    height: 85%;
+    background: #FFFFFF;
+    margin-top: -25px;
+    padding-top: 100px;
+  } */
+  .stopwatch {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 30px 0;
+    /* background: #FF5722; */
+    color: #FFFFFF;
+  }
+  .btn {
+    width: 30%;
+    height: 40px;
+    font: normal 24px 'Roboto', sans-serif;
+    margin: auto;
+    background: #FFFFFF;
+    -webkit-box-shadow: 5px 6px 9px 1px rgba(53, 53, 53, 0.5);
+    -moz-box-shadow: 5px 6px 9px 1px rgba(53, 53, 53, 0.5);
+    box-shadow: 5px 6px 9px 1px rgba(53, 53, 53, 0.5);
+  }
