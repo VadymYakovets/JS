@@ -1,0 +1,52 @@
+body {
+  padding: 1rem;
+  padding-bottom: 1rem;
+  /* text-align: center; */
+}
+
+/* .usersBox {
+  border: solid 1px red;
+  color: red;
+  height: 100px;
+} */
+
+/* .resultAllUsers {
+  height: 300px;
+} */
+
+.btn {
+  /* padding: 1rem; */
+  text-align: right;
+  font-size: 0.9rem;
+  /* padding-bottom: 0.rem; */
+  /* background-color: red; */
+  color: red;
+}
+
+.input {
+  font-size: 0.9rem;
+}
+
+.AU_Table {
+  padding: 1rem 0 1rem;
+  height: 300px;
+  /* border: solid 2px red; */
+}
+
+/* .ResulPostUser {
+  padding: 1rem 0 1rem;
+} */
+
+th {
+  color: grey;
+  border: solid 1px black;
+}
+
+td {
+  color: grey;
+  border: solid 1px black;
+}
+
+.userID {
+  padding: 15px 0 0;
+}

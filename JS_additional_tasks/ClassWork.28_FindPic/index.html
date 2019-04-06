@@ -1,0 +1,69 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="./css/style.css">
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script> -->
+      <title>Модульность приложения в ES-5. Вместо классов в ES-6</title>
+  </head>  
+      <body>
+      
+      <!-- =============== HEADER =============== -->
+      <header class="main__header">
+        <!-- =============== ИЗБРАННОЕ =============== -->
+        <nav class="header__nav">
+          <a class="nav__text " href="#">Избранное</a>
+          <img class="nav__img" src="images/icon.png" alt="Favorite">
+        </nav>
+      
+        <!-- =============== СЕКЦИЯ ПОИСКА =============== -->
+        <section class="header__find">
+          <div class="find__logo-box">
+            <a class="logo-box__a" href="index.html">
+              <img class="logo-box__a--img" src="images/logo.png" alt="FindPic Logo">
+            </a>
+          </div>
+          <!-- <div class="find__form-box"> -->
+              <form class="form-box__form" action="#">
+                  <input class="form__input" type="text" placeholder="Введите поисковый запрос">
+                  <button class="form__button">Поиск</button>
+              </form>
+          <!-- </div> -->
+          <div class="find__search-box"></div>
+        </section>
+      </header>
+      
+      
+      <section class="gallery">
+      <div class="gallery__wrapper">
+      </div>
+      <button class="gallery-wrapper__show-more-btn btn-hidden">Показать еще</button>
+      
+      </section>
+      
+      <section class="favorites-gallery fav-hidden">
+          <div class="favorites-gallery__favorites">
+            <a href="#" class="favorites_btn">Избранное</a>
+          </div>
+          <div class="favorites-gallery__img-list"></div>
+      </section>
+      
+      <section class="modal modal-hidden js-modal-backdrop">
+        <div class="modal-content">
+            <div class="img-box">
+                <img class="modal-img" src="" alt="">
+            </div>
+      
+        <div class="modal__backdrop--button">
+          <span class="bold modal-buttons modal-prev" style="color: rgb(255, 255, 255)">&lt</span>
+          <span class="bold modal-buttons modal-next" style="color: rgb(255, 255, 255)">&gt</span>
+          <span class="modal-buttons modal-favorite" style="color: rgb(255, 255, 255)">&#9733</span>
+          <span class="modal-buttons modal-close" style="color: rgb(255, 255, 255)">&#10006</span>
+        </div>
+      </div>
+      </section>
+
+  <script src="./js/index.js"></script>
+</body>
+</html>

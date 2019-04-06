@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>MODULE-10</title>
+</head>
+<body>
+    <div class="usersBox">
+        <form class="searchUser">
+            <button type="submit" id="GAU-btn" class="gauBtn btn">GET ALL USER INFO</button>
+            <button type="submit" id="CL-btn" class="clBtn btn">RELOAD PAGE</button>
+        </form>
+        <div class="resultAllUsers"></div>
+    </div>
+
+    <div class="userID">
+        <form class="UserIdForm">
+            <input type="text" class="GUBI_inputID input" placeholder="user ID">
+            <button type="submit" class="GUBI-btn btn">GET USER BY ID</button>
+        </form>
+        <p class="ResulByUserID"></p>
+    </div>
+
+    <div class="postUser">
+        <form class="UserForm">
+            <input type="text" class="inputPostName input" placeholder="user Name">
+            <input type="text" class="inputPostAge input" placeholder="user Age">
+            <button type="submit" class="addUserBtn btn">ADD USER</button>
+        </form>
+        <p class="ResultPostUser"></p>
+    </div>
+
+    <div class="updateUser">
+            <form class="UserUpdForm">
+                <input type="text" class="inputUpd_ID input" placeholder="user ID">
+                <input type="text" class="inputUpd_Name input" placeholder="user Name">
+                <input type="text" class="inputUpd_Age input" placeholder="user Age">
+                <button type="submit" class="updUser-btn btn">UPD USER</button>
+            </form>
+            <!-- <div class="ResulByUserID"></div> -->
+            <p class="updateResult"></p>
+        </div>
+
+        <div class="removeUser">
+                <form class="UserRemoveForm">
+                    <input type="text" class="inputRem_ID input" placeholder="user ID">
+                    <button type="submit" class="rem-btn btn">REMOVE USER</button>
+                </form>
+                <!-- <div class="ResulByUserID"></div> -->
+                <p class="removeResult"></p>
+            </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

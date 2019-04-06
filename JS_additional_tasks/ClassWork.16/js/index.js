@@ -18,6 +18,7 @@ fetch(URL)
     .then(result => render(result))
     .catch(err => console.log(err))
 
+
 function render (arr) {
     let body = document.querySelector('body')
     let result = '';
